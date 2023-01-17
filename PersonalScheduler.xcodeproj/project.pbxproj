@@ -27,6 +27,7 @@
 		FFBF992C297563FC00A7BAC3 /* CRUDScheduleRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF992B297563FC00A7BAC3 /* CRUDScheduleRepositoryProtocol.swift */; };
 		FFBF992E2975643800A7BAC3 /* CRUDScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF992D2975643800A7BAC3 /* CRUDScheduleRepository.swift */; };
 		FFBF99302975646700A7BAC3 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF992F2975646700A7BAC3 /* FirestoreService.swift */; };
+		FFBF99322975674D00A7BAC3 /* ViewSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF99312975674D00A7BAC3 /* ViewSchedule.swift */; };
 		FFD58E6429702E3F002D99B6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD58E6329702E3F002D99B6 /* LoginViewModel.swift */; };
 		FFD58E6629702E51002D99B6 /* AppleAuthorityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD58E6529702E51002D99B6 /* AppleAuthorityService.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		FFBF992B297563FC00A7BAC3 /* CRUDScheduleRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDScheduleRepositoryProtocol.swift; sourceTree = "<group>"; };
 		FFBF992D2975643800A7BAC3 /* CRUDScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDScheduleRepository.swift; sourceTree = "<group>"; };
 		FFBF992F2975646700A7BAC3 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
+		FFBF99312975674D00A7BAC3 /* ViewSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSchedule.swift; sourceTree = "<group>"; };
 		FFD58E6329702E3F002D99B6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FFD58E6529702E51002D99B6 /* AppleAuthorityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthorityService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				FFBF99272975633500A7BAC3 /* ScheduleListViewModel.swift */,
+				FFBF99312975674D00A7BAC3 /* ViewSchedule.swift */,
 				FFBF9925297562D800A7BAC3 /* ScheduleListViewController.swift */,
 			);
 			path = ScheduleList;
@@ -293,6 +296,7 @@
 				63AAAB062967EA2600775EC3 /* LoginViewController.swift in Sources */,
 				FFBF99302975646700A7BAC3 /* FirestoreService.swift in Sources */,
 				FF4CDF7F2970FBB600B48003 /* SignInRepositoryProtocol.swift in Sources */,
+				FFBF99322975674D00A7BAC3 /* ViewSchedule.swift in Sources */,
 				FF4CDF7C2970FB9000B48003 /* SignInRepository.swift in Sources */,
 				63AAAB022967EA2600775EC3 /* AppDelegate.swift in Sources */,
 				FFBF992E2975643800A7BAC3 /* CRUDScheduleRepository.swift in Sources */,

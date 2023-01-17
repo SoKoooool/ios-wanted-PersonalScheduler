@@ -14,4 +14,8 @@ final class CRUDScheduleUseCase {
     init(repository: CRUDScheduleRepositoryProtocol = CRUDScheduleRepository()) {
         self.repository = repository
     }
+    
+    func loadSchedule() {
+        
+    }
 }
