@@ -11,19 +11,20 @@ final class CRUDScheduleRepository: CRUDScheduleRepositoryProtocol {
     
     private let service = FirestoreService()
     
-    func createSchdule() {
-        
+    func createSchdule(item: ViewSchedule) {
+        service.add(data: item.toData())
     }
     
-    func readSchedule() {
-        
+    func readSchedule(completion: @escaping ([ViewSchedule]) -> Void) {
+        service.get { completion($0) }
     }
     
-    func updateSchedule() {
-        
+    func updateSchedule(item: ViewSchedule) {
+        service.set(data: item.toData(), uid: item.uuid.uuidString)
     }
     
-    func deleteSchedule() {
-        
+    func deleteSchedule(item: ViewSchedule) {
+        guard let title = item.title else { return }
+        service.delete(key: title, uid: item.uuid.uuidString)
     }
 }

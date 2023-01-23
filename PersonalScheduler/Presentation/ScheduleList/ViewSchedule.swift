@@ -13,6 +13,7 @@ struct ViewSchedule {
     let endDate: String?
     let content: String?
     let isCurrentDate: Bool?
+    let uuid = UUID()
     
     init(_ data: [String : Any]) {
         self.title = data["title"] as? String
