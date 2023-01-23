@@ -21,4 +21,14 @@ struct ViewSchedule {
         self.content = data["content"] as? String
         self.isCurrentDate = data["isCurrentDate"] as? Bool
     }
+    
+    func toData() -> [String: Any] {
+        var data = [String : Any]()
+        data["title"] = self.title
+        data["starDate"] = self.startDate
+        data["endDate"] = self.endDate
+        data["content"] = self.content
+        data["isCurrentDate"] = self.isCurrentDate
+        return data
+    }
 }
