@@ -16,6 +16,20 @@ final class ScheduleListViewModel {
     }
     
     func reload() {
-        
+        useCase.getExecute { schedules in
+            print(schedules)
+        }
+    }
+    
+    func save(schedule: ViewSchedule) {
+        useCase.postExcute(for: schedule)
+    }
+    
+    func edit(schedule: ViewSchedule) {
+        useCase.putExecute(for: schedule)
+    }
+    
+    func remove(schedule: ViewSchedule) {
+        useCase.deleteExecute(for: schedule)
     }
 }

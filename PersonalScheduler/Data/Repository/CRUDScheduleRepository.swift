@@ -11,7 +11,7 @@ final class CRUDScheduleRepository: CRUDScheduleRepositoryProtocol {
     
     private let service = FirestoreService()
     
-    func createSchdule(item: ViewSchedule) {
+    func createSchedule(item: ViewSchedule) {
         service.add(data: item.toData())
     }
     

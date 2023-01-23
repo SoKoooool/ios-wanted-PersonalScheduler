@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CRUDScheduleRepositoryProtocol {
-    func createSchdule(item: ViewSchedule)
+    func createSchedule(item: ViewSchedule)
     func readSchedule(completion: @escaping (([ViewSchedule]) -> Void))
     func updateSchedule(item: ViewSchedule)
     func deleteSchedule(item: ViewSchedule)

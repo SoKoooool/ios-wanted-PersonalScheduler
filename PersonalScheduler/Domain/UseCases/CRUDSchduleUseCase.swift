@@ -15,7 +15,19 @@ final class CRUDScheduleUseCase {
         self.repository = repository
     }
     
-    func loadSchedule() {
-        
+    func postExcute(for item: ViewSchedule) {
+        repository.createSchedule(item: item)
+    }
+    
+    func getExecute(onComplete: @escaping (([ViewSchedule])) -> Void) {
+        repository.readSchedule { onComplete($0) }
+    }
+    
+    func putExecute(for item: ViewSchedule) {
+        repository.updateSchedule(item: item)
+    }
+    
+    func deleteExecute(for item: ViewSchedule) {
+        repository.deleteSchedule(item: item)
     }
 }
