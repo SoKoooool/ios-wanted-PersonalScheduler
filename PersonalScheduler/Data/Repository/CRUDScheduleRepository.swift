@@ -11,15 +11,19 @@ final class CRUDScheduleRepository: CRUDScheduleRepositoryProtocol {
     
     private let service = FirestoreService()
     
-    func put() {
+    func createSchdule() {
         
     }
     
-    func fetch() {
+    func readSchedule() {
         
     }
     
-    func delete() {
+    func updateSchedule() {
+        
+    }
+    
+    func deleteSchedule() {
         
     }
 }

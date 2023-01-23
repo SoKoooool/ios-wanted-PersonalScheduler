@@ -138,8 +138,8 @@
 		FFBF9924297562C400A7BAC3 /* ScheduleList */ = {
 			isa = PBXGroup;
 			children = (
-				FFBF99272975633500A7BAC3 /* ScheduleListViewModel.swift */,
 				FFBF99312975674D00A7BAC3 /* ViewSchedule.swift */,
+				FFBF99272975633500A7BAC3 /* ScheduleListViewModel.swift */,
 				FFBF9925297562D800A7BAC3 /* ScheduleListViewController.swift */,
 			);
 			path = ScheduleList;

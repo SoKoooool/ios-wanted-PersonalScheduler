@@ -8,7 +8,8 @@
 import Foundation
 
 protocol CRUDScheduleRepositoryProtocol {
-    func put()
-    func fetch()
-    func delete()
+    func createSchdule()
+    func readSchedule()
+    func updateSchedule()
+    func deleteSchedule()
 }

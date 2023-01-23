@@ -40,6 +40,7 @@ final class LoginViewController: UIViewController {
         setupViews()
         bind()
         makeConstraints()
+        FirestoreService().fetch()
     }
 }
 
