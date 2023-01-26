@@ -9,9 +9,9 @@ import Foundation
 
 final class ScheduleListViewModel {
     
-    private let useCase: CRUDScheduleUseCase!
+    private let useCase: ScheduleUseCase!
     
-    init(useCase: CRUDScheduleUseCase = CRUDScheduleUseCase()) {
+    init(useCase: ScheduleUseCase = ScheduleUseCase()) {
         self.useCase = useCase
     }
     

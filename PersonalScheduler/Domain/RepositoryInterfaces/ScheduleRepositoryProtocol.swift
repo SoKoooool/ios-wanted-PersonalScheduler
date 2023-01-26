@@ -1,5 +1,5 @@
 //
-//  CRUDScheduleRepositoryProtocol.swift
+//  ScheduleRepositoryProtocol.swift
 //  PersonalScheduler
 //
 //  Created by TORI on 2023/01/16.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CRUDScheduleRepositoryProtocol {
+protocol ScheduleRepositoryProtocol {
     func createSchedule(item: ViewSchedule)
     func readSchedule(completion: @escaping (([ViewSchedule]) -> Void))
     func updateSchedule(item: ViewSchedule)

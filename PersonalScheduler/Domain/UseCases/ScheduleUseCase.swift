@@ -1,5 +1,5 @@
 //
-//  CRUDSchduleUseCase.swift
+//  ScheduleUseCase.swift
 //  PersonalScheduler
 //
 //  Created by TORI on 2023/01/16.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-final class CRUDScheduleUseCase {
+final class ScheduleUseCase {
     
-    private let repository: CRUDScheduleRepositoryProtocol!
+    private let repository: ScheduleRepositoryProtocol!
     
-    init(repository: CRUDScheduleRepositoryProtocol = CRUDScheduleRepository()) {
+    init(repository: ScheduleRepositoryProtocol = ScheduleRepository()) {
         self.repository = repository
     }
     

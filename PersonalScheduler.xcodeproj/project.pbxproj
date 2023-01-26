@@ -23,9 +23,9 @@
 		FFBF99232975629500A7BAC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFBF99222975629500A7BAC3 /* GoogleService-Info.plist */; };
 		FFBF9926297562D800A7BAC3 /* ScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF9925297562D800A7BAC3 /* ScheduleListViewController.swift */; };
 		FFBF99282975633500A7BAC3 /* ScheduleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF99272975633500A7BAC3 /* ScheduleListViewModel.swift */; };
-		FFBF992A2975638F00A7BAC3 /* CRUDSchduleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF99292975638F00A7BAC3 /* CRUDSchduleUseCase.swift */; };
-		FFBF992C297563FC00A7BAC3 /* CRUDScheduleRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF992B297563FC00A7BAC3 /* CRUDScheduleRepositoryProtocol.swift */; };
-		FFBF992E2975643800A7BAC3 /* CRUDScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF992D2975643800A7BAC3 /* CRUDScheduleRepository.swift */; };
+		FFBF992A2975638F00A7BAC3 /* ScheduleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF99292975638F00A7BAC3 /* ScheduleUseCase.swift */; };
+		FFBF992C297563FC00A7BAC3 /* ScheduleRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF992B297563FC00A7BAC3 /* ScheduleRepositoryProtocol.swift */; };
+		FFBF992E2975643800A7BAC3 /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF992D2975643800A7BAC3 /* ScheduleRepository.swift */; };
 		FFBF99302975646700A7BAC3 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF992F2975646700A7BAC3 /* FirestoreService.swift */; };
 		FFBF99322975674D00A7BAC3 /* ViewSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF99312975674D00A7BAC3 /* ViewSchedule.swift */; };
 		FFD58E6429702E3F002D99B6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD58E6329702E3F002D99B6 /* LoginViewModel.swift */; };
@@ -48,9 +48,9 @@
 		FFBF99222975629500A7BAC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFBF9925297562D800A7BAC3 /* ScheduleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListViewController.swift; sourceTree = "<group>"; };
 		FFBF99272975633500A7BAC3 /* ScheduleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListViewModel.swift; sourceTree = "<group>"; };
-		FFBF99292975638F00A7BAC3 /* CRUDSchduleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDSchduleUseCase.swift; sourceTree = "<group>"; };
-		FFBF992B297563FC00A7BAC3 /* CRUDScheduleRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDScheduleRepositoryProtocol.swift; sourceTree = "<group>"; };
-		FFBF992D2975643800A7BAC3 /* CRUDScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDScheduleRepository.swift; sourceTree = "<group>"; };
+		FFBF99292975638F00A7BAC3 /* ScheduleUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleUseCase.swift; sourceTree = "<group>"; };
+		FFBF992B297563FC00A7BAC3 /* ScheduleRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepositoryProtocol.swift; sourceTree = "<group>"; };
+		FFBF992D2975643800A7BAC3 /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
 		FFBF992F2975646700A7BAC3 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		FFBF99312975674D00A7BAC3 /* ViewSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSchedule.swift; sourceTree = "<group>"; };
 		FFD58E6329702E3F002D99B6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				FF4CDF762970F7B600B48003 /* SignInUseCase.swift */,
-				FFBF99292975638F00A7BAC3 /* CRUDSchduleUseCase.swift */,
+				FFBF99292975638F00A7BAC3 /* ScheduleUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -113,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				FF4CDF7B2970FB9000B48003 /* SignInRepository.swift */,
-				FFBF992D2975643800A7BAC3 /* CRUDScheduleRepository.swift */,
+				FFBF992D2975643800A7BAC3 /* ScheduleRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -122,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				FF4CDF7E2970FBB600B48003 /* SignInRepositoryProtocol.swift */,
-				FFBF992B297563FC00A7BAC3 /* CRUDScheduleRepositoryProtocol.swift */,
+				FFBF992B297563FC00A7BAC3 /* ScheduleRepositoryProtocol.swift */,
 			);
 			path = RepositoryInterfaces;
 			sourceTree = "<group>";
@@ -299,14 +299,14 @@
 				FFBF99322975674D00A7BAC3 /* ViewSchedule.swift in Sources */,
 				FF4CDF7C2970FB9000B48003 /* SignInRepository.swift in Sources */,
 				63AAAB022967EA2600775EC3 /* AppDelegate.swift in Sources */,
-				FFBF992E2975643800A7BAC3 /* CRUDScheduleRepository.swift in Sources */,
+				FFBF992E2975643800A7BAC3 /* ScheduleRepository.swift in Sources */,
 				FFBF9926297562D800A7BAC3 /* ScheduleListViewController.swift in Sources */,
 				63AAAB042967EA2600775EC3 /* SceneDelegate.swift in Sources */,
 				FFBF99282975633500A7BAC3 /* ScheduleListViewModel.swift in Sources */,
 				FF4CDF772970F7B600B48003 /* SignInUseCase.swift in Sources */,
-				FFBF992A2975638F00A7BAC3 /* CRUDSchduleUseCase.swift in Sources */,
+				FFBF992A2975638F00A7BAC3 /* ScheduleUseCase.swift in Sources */,
 				FFA0BAAA29713E4B00CEC09D /* KeychainItem.swift in Sources */,
-				FFBF992C297563FC00A7BAC3 /* CRUDScheduleRepositoryProtocol.swift in Sources */,
+				FFBF992C297563FC00A7BAC3 /* ScheduleRepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,7 @@ struct ViewSchedule {
     let endDate: String?
     let content: String?
     let isCurrentDate: Bool?
-    let uuid = UUID()
+    let uuid: String
     
     init(_ data: [String : Any]) {
         self.title = data["title"] as? String
@@ -21,6 +21,20 @@ struct ViewSchedule {
         self.endDate = data["endDate"] as? String
         self.content = data["content"] as? String
         self.isCurrentDate = data["isCurrentDate"] as? Bool
+        self.uuid = data["uuid"] as? String ?? UUID().uuidString
+    }
+    
+    init(title: String,
+         startDate: String,
+         endDate: String,
+         content: String,
+         isCurrentDate: Bool = false) {
+        self.title = title
+        self.startDate = startDate
+        self.endDate = endDate
+        self.content = content
+        self.isCurrentDate = isCurrentDate
+        self.uuid = UUID().uuidString
     }
     
     func toData() -> [String: Any] {

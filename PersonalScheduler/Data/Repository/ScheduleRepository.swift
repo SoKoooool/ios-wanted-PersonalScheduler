@@ -1,5 +1,5 @@
 //
-//  CRUDScheduleRepository.swift
+//  ScheduleRepository.swift
 //  PersonalScheduler
 //
 //  Created by TORI on 2023/01/16.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class CRUDScheduleRepository: CRUDScheduleRepositoryProtocol {
+final class ScheduleRepository: ScheduleRepositoryProtocol {
     
     private let service = FirestoreService()
     
