@@ -12,10 +12,10 @@ final class FirestoreService {
     
     private let db = Firestore.firestore()
     private var ref: DocumentReference?
+    private lazy var dbCollection = db.collection("personalSchedule")
     
-    func get(completion: @escaping ([ViewSchedule]) -> Void) {
-        db.collection("personalSchedule")
-            .getDocuments { snapshot, error in
+    func getDocuments(completion: @escaping ([ViewSchedule]) -> Void) {
+        dbCollection.getDocuments { snapshot, error in
                 guard error == nil else {
                     print(error!.localizedDescription)
                     return
@@ -28,9 +28,8 @@ final class FirestoreService {
             }
     }
     
-    func add(data: [String : Any]) {
-        ref = db.collection("personalSchedule")
-            .addDocument(data: data) {
+    func addDocument(data: [String : Any]) {
+        ref = dbCollection.addDocument(data: data) {
             error in
             guard error == nil else {
                 print(error!.localizedDescription)
@@ -39,9 +38,8 @@ final class FirestoreService {
         }
     }
     
-    func set(data: [String : Any], uid: String) {
-        db.collection("personalSchedule")
-            .document(uid)
+    func setDocument(data: [String : Any], uid: String) {
+        dbCollection.document(uid)
             .setData(data) { error in
                 guard error == nil else {
                     print(error!.localizedDescription)
@@ -50,9 +48,8 @@ final class FirestoreService {
             }
     }
     
-    func delete(key: String, uid: String) {
-        db.collection("personalSchedule")
-            .document(uid)
+    func deleteDocument(key: String, uid: String) {
+        dbCollection.document(uid)
             .updateData([key : FieldValue.delete()]) { error in
                 guard error == nil else {
                     print(error!.localizedDescription)
