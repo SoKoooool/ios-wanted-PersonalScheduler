@@ -12,12 +12,10 @@ final class FirestoreService {
     
     private let db = Firestore.firestore()
     private var ref: DocumentReference?
-    private var uid: String {
-        guard let uid = try? KeychainItem(service: "com.wanted.PersonalScheduler", account: "uid").readItem() else { return "uid" }
-        return uid
-    }
+    private var uid = ""
     
-    func getDocuments(completion: @escaping ([ViewSchedule]) -> Void) {
+    func getDocuments(uid: String, completion: @escaping ([ViewSchedule]) -> Void) {
+        self.uid = uid
         db.collection(uid)
             .getDocuments { snapshot, error in
                 guard error == nil else {

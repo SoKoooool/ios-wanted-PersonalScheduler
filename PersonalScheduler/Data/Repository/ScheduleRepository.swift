@@ -15,8 +15,8 @@ final class ScheduleRepository: ScheduleRepositoryProtocol {
         service.addDocument(data: data)
     }
     
-    func read(completion: @escaping ([ViewSchedule]) -> Void) {
-        service.getDocuments { completion($0) }
+    func read(uid: String, completion: @escaping ([ViewSchedule]) -> Void) {
+        service.getDocuments(uid: uid) { completion($0) }
     }
     
     func update(id: String, data: [String : Any]) {

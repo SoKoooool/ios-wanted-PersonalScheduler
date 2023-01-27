@@ -21,18 +21,6 @@ final class SignInUseCase {
             case let .success(data):
                 guard let data = data else { return }
                 self?.saveUserInKeychain(data.user.uid)
-                
-//                FirestoreService().getDocuments { schedules in
-//                    print(schedules)
-//                }
-                
-                let model = ["title" : "제목",
-                             "content" : "내용",
-                             "startDate" : "시작일",
-                             "endDate" : "종료일",
-                             "isCurrentDate" : false]
-                FirestoreService().addDocument(data: model)
-                
             case let .failure(error):
                 print(#function)
                 print(error.localizedDescription)
