@@ -10,14 +10,15 @@ import Foundation
 final class ScheduleListViewModel {
     
     private let useCase: ScheduleUseCase!
+    var scheduleList = Observable([ViewSchedule]())
     
     init(useCase: ScheduleUseCase = ScheduleUseCase()) {
         self.useCase = useCase
     }
     
     func reload() {
-        useCase.executeReadSchedules { schedules in
-            print(schedules)
+        useCase.executeReadSchedules { [weak self] schedules in
+            self?.scheduleList.value = schedules
         }
     }
     

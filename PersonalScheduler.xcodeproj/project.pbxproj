@@ -28,6 +28,7 @@
 		FFBF992E2975643800A7BAC3 /* ScheduleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF992D2975643800A7BAC3 /* ScheduleRepository.swift */; };
 		FFBF99302975646700A7BAC3 /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF992F2975646700A7BAC3 /* FirestoreService.swift */; };
 		FFBF99322975674D00A7BAC3 /* ViewSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF99312975674D00A7BAC3 /* ViewSchedule.swift */; };
+		FFC57AFE2983AF86004A1287 /* Obervable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC57AFD2983AF86004A1287 /* Obervable.swift */; };
 		FFD58E6429702E3F002D99B6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD58E6329702E3F002D99B6 /* LoginViewModel.swift */; };
 		FFD58E6629702E51002D99B6 /* AppleAuthorityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD58E6529702E51002D99B6 /* AppleAuthorityService.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		FFBF992D2975643800A7BAC3 /* ScheduleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRepository.swift; sourceTree = "<group>"; };
 		FFBF992F2975646700A7BAC3 /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		FFBF99312975674D00A7BAC3 /* ViewSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSchedule.swift; sourceTree = "<group>"; };
+		FFC57AFD2983AF86004A1287 /* Obervable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obervable.swift; sourceTree = "<group>"; };
 		FFD58E6329702E3F002D99B6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FFD58E6529702E51002D99B6 /* AppleAuthorityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthorityService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,8 +95,8 @@
 				FFD58E6229702E1A002D99B6 /* Application */,
 				FFD58E5F29702DF7002D99B6 /* Data */,
 				FFD58E5D29702DE7002D99B6 /* Domain */,
-				FFA0BAA829713E3A00CEC09D /* Model */,
 				FFD58E5E29702DEA002D99B6 /* Presentation */,
+				FFC57AFC2983AF72004A1287 /* Helpers */,
 				FFD58E5A29702DD3002D99B6 /* Resources */,
 			);
 			path = PersonalScheduler;
@@ -103,6 +105,7 @@
 		FF4CDF782970F7C600B48003 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				FFA0BAA829713E3A00CEC09D /* Model */,
 				FF4CDF762970F7B600B48003 /* SignInUseCase.swift */,
 				FFBF99292975638F00A7BAC3 /* ScheduleUseCase.swift */,
 			);
@@ -143,6 +146,14 @@
 				FFBF9925297562D800A7BAC3 /* ScheduleListViewController.swift */,
 			);
 			path = ScheduleList;
+			sourceTree = "<group>";
+		};
+		FFC57AFC2983AF72004A1287 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FFC57AFD2983AF86004A1287 /* Obervable.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		FFD58E5A29702DD3002D99B6 /* Resources */ = {
@@ -305,6 +316,7 @@
 				FFBF99282975633500A7BAC3 /* ScheduleListViewModel.swift in Sources */,
 				FF4CDF772970F7B600B48003 /* SignInUseCase.swift in Sources */,
 				FFBF992A2975638F00A7BAC3 /* ScheduleUseCase.swift in Sources */,
+				FFC57AFE2983AF86004A1287 /* Obervable.swift in Sources */,
 				FFA0BAAA29713E4B00CEC09D /* KeychainItem.swift in Sources */,
 				FFBF992C297563FC00A7BAC3 /* ScheduleRepositoryProtocol.swift in Sources */,
 			);
