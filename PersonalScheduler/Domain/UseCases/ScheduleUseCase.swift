@@ -16,18 +16,18 @@ final class ScheduleUseCase {
     }
     
     func executeCreateSchedule(item: ViewSchedule) {
-        repository.createSchedule(item: item)
+        repository.create(data: item.toData())
     }
     
     func executeReadSchedules(onComplete: @escaping (([ViewSchedule])) -> Void) {
-        repository.readSchedule { onComplete($0) }
+        repository.read { onComplete($0) }
     }
     
     func executeUpdateSchedule(item: ViewSchedule) {
-        repository.updateSchedule(item: item)
+        repository.update(id: item.uuid, data: item.toData())
     }
     
     func executeDeleteSchedule(item: ViewSchedule) {
-        repository.deleteSchedule(item: item)
+        repository.delete(id: item.uuid)
     }
 }

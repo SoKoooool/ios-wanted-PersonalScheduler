@@ -11,20 +11,19 @@ final class ScheduleRepository: ScheduleRepositoryProtocol {
     
     private let service = FirestoreService()
     
-    func createSchedule(item: ViewSchedule) {
-        service.addDocument(data: item.toData())
+    func create(data: [String : Any]) {
+        service.addDocument(data: data)
     }
     
-    func readSchedule(completion: @escaping ([ViewSchedule]) -> Void) {
+    func read(completion: @escaping ([ViewSchedule]) -> Void) {
         service.getDocuments { completion($0) }
     }
     
-    func updateSchedule(item: ViewSchedule) {
-        service.set(data: item.toData(), uid: item.uuid.uuidString)
+    func update(id: String, data: [String : Any]) {
+        service.updateDocument(id: id, data: data)
     }
     
-    func deleteSchedule(item: ViewSchedule) {
-        guard let title = item.title else { return }
-        service.delete(key: title, uid: item.uuid.uuidString)
+    func delete(id: String) {
+        service.deleteDocument(id: id)
     }
 }

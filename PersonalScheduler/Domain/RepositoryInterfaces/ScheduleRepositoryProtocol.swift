@@ -8,8 +8,8 @@
 import Foundation
 
 protocol ScheduleRepositoryProtocol {
-    func createSchedule(item: ViewSchedule)
-    func readSchedule(completion: @escaping (([ViewSchedule]) -> Void))
-    func updateSchedule(item: ViewSchedule)
-    func deleteSchedule(item: ViewSchedule)
+    func create(data: [String : Any])
+    func read(completion: @escaping (([ViewSchedule]) -> Void))
+    func update(id: String, data: [String : Any])
+    func delete(id: String)
 }

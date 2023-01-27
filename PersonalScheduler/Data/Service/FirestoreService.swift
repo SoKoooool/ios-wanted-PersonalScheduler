@@ -12,12 +12,16 @@ final class FirestoreService {
     
     private let db = Firestore.firestore()
     private var ref: DocumentReference?
-    private lazy var dbCollection = db.collection("personalSchedule")
+    private var uid: String {
+        guard let uid = try? KeychainItem(service: "com.wanted.PersonalScheduler", account: "uid").readItem() else { return "uid" }
+        return uid
+    }
     
     func getDocuments(completion: @escaping ([ViewSchedule]) -> Void) {
-        dbCollection.getDocuments { snapshot, error in
+        db.collection(uid)
+            .getDocuments { snapshot, error in
                 guard error == nil else {
-                    print(error!.localizedDescription)
+                    print(error?.localizedDescription ?? #function)
                     return
                 }
                 guard let snapshot = snapshot else { return }
@@ -29,34 +33,30 @@ final class FirestoreService {
     }
     
     func addDocument(data: [String : Any]) {
-        ref = dbCollection.addDocument(data: data) {
-            error in
+        ref = db.collection(uid)
+            .addDocument(data: data) { error in
             guard error == nil else {
-                print(error!.localizedDescription)
+                print(error?.localizedDescription ?? #function)
                 return
             }
         }
+        guard let id = ref?.documentID else { return }
+        updateDocument(id: id, data: ["id" : id])
     }
     
-    func setDocument(data: [String : Any], uid: String) {
-        dbCollection.document(uid)
-            .setData(data) { error in
+    func updateDocument(id: String, data: [String : Any]) {
+        db.collection(uid)
+            .document(id)
+            .updateData(data) { error in
                 guard error == nil else {
-                    print(error!.localizedDescription)
+                    print(error?.localizedDescription ?? #function)
                     return
                 }
             }
     }
     
-    func deleteDocument(key: String, uid: String) {
-        dbCollection.document(uid)
-            .updateData([key : FieldValue.delete()]) { error in
-                guard error == nil else {
-                    print(error!.localizedDescription)
-                    return
-                }
-            }
-        
+    func deleteDocument(id: String) {
+        db.collection(uid).document(id).delete()
     }
 }
 

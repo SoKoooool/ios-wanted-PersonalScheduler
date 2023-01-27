@@ -13,7 +13,7 @@ struct ViewSchedule {
     let endDate: String?
     let content: String?
     let isCurrentDate: Bool?
-    let uuid: String
+    let uuid: String // id 변경 못하게 수정
     
     init(_ data: [String : Any]) {
         self.title = data["title"] as? String
