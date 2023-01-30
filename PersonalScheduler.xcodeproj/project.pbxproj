@@ -10,7 +10,6 @@
 		63AAAB022967EA2600775EC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AAAB012967EA2600775EC3 /* AppDelegate.swift */; };
 		63AAAB042967EA2600775EC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AAAB032967EA2600775EC3 /* SceneDelegate.swift */; };
 		63AAAB062967EA2600775EC3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AAAB052967EA2600775EC3 /* LoginViewController.swift */; };
-		63AAAB092967EA2600775EC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AAAB072967EA2600775EC3 /* Main.storyboard */; };
 		63AAAB0B2967EA2700775EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63AAAB0A2967EA2700775EC3 /* Assets.xcassets */; };
 		63AAAB0E2967EA2700775EC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63AAAB0C2967EA2700775EC3 /* LaunchScreen.storyboard */; };
 		FF4CDF772970F7B600B48003 /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4CDF762970F7B600B48003 /* SignInUseCase.swift */; };
@@ -20,6 +19,7 @@
 		FF4CDF88297135A500B48003 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FF4CDF87297135A500B48003 /* FirebaseFirestore */; };
 		FF4CDF8A297135A500B48003 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF4CDF89297135A500B48003 /* FirebaseFirestoreSwift */; };
 		FFA0BAAA29713E4B00CEC09D /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA0BAA929713E4B00CEC09D /* KeychainItem.swift */; };
+		FFBF37E02987654D008720DD /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = FFBF37DF2987654D008720DD /* FirebaseMessaging */; };
 		FFBF99232975629500A7BAC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFBF99222975629500A7BAC3 /* GoogleService-Info.plist */; };
 		FFBF9926297562D800A7BAC3 /* ScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF9925297562D800A7BAC3 /* ScheduleListViewController.swift */; };
 		FFBF99282975633500A7BAC3 /* ScheduleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF99272975633500A7BAC3 /* ScheduleListViewModel.swift */; };
@@ -38,7 +38,6 @@
 		63AAAB012967EA2600775EC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63AAAB032967EA2600775EC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		63AAAB052967EA2600775EC3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		63AAAB082967EA2600775EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63AAAB0A2967EA2700775EC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63AAAB0D2967EA2700775EC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63AAAB0F2967EA2700775EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBF37E02987654D008720DD /* FirebaseMessaging in Frameworks */,
 				FF4CDF86297135A500B48003 /* FirebaseAuth in Frameworks */,
 				FF4CDF88297135A500B48003 /* FirebaseFirestore in Frameworks */,
 				FF4CDF8A297135A500B48003 /* FirebaseFirestoreSwift in Frameworks */,
@@ -78,6 +78,7 @@
 			children = (
 				63AAAB002967EA2600775EC3 /* PersonalScheduler */,
 				63AAAAFF2967EA2600775EC3 /* Products */,
+				FFBF37DE2987654D008720DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +139,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FFBF37DE2987654D008720DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FFBF9924297562C400A7BAC3 /* ScheduleList */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				63AAAB0F2967EA2700775EC3 /* Info.plist */,
-				63AAAB072967EA2600775EC3 /* Main.storyboard */,
 				63AAAB0A2967EA2700775EC3 /* Assets.xcassets */,
 				63AAAB0C2967EA2700775EC3 /* LaunchScreen.storyboard */,
 				FFBF99222975629500A7BAC3 /* GoogleService-Info.plist */,
@@ -242,6 +249,7 @@
 				FF4CDF85297135A500B48003 /* FirebaseAuth */,
 				FF4CDF87297135A500B48003 /* FirebaseFirestore */,
 				FF4CDF89297135A500B48003 /* FirebaseFirestoreSwift */,
+				FFBF37DF2987654D008720DD /* FirebaseMessaging */,
 			);
 			productName = PersonalScheduler;
 			productReference = 63AAAAFE2967EA2600775EC3 /* PersonalScheduler.app */;
@@ -291,7 +299,6 @@
 				63AAAB0E2967EA2700775EC3 /* LaunchScreen.storyboard in Resources */,
 				FFBF99232975629500A7BAC3 /* GoogleService-Info.plist in Resources */,
 				63AAAB0B2967EA2700775EC3 /* Assets.xcassets in Resources */,
-				63AAAB092967EA2600775EC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,14 +332,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		63AAAB072967EA2600775EC3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63AAAB082967EA2600775EC3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		63AAAB0C2967EA2700775EC3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -567,6 +566,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FF4CDF84297135A500B48003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		FFBF37DF2987654D008720DD /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF4CDF84297135A500B48003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
