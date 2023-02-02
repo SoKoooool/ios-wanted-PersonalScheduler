@@ -21,6 +21,7 @@
 		FFA0BAAA29713E4B00CEC09D /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA0BAA929713E4B00CEC09D /* KeychainItem.swift */; };
 		FFACEFBD298B80FA0093F787 /* ScheduleFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACEFBC298B80FA0093F787 /* ScheduleFormViewController.swift */; };
 		FFACEFBF298B81230093F787 /* ScheduleFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACEFBE298B81230093F787 /* ScheduleFormViewModel.swift */; };
+		FFACEFC3298B94F60093F787 /* FirebaseCloudMessagingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACEFC2298B94F60093F787 /* FirebaseCloudMessagingService.swift */; };
 		FFBF37E02987654D008720DD /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = FFBF37DF2987654D008720DD /* FirebaseMessaging */; };
 		FFBF99232975629500A7BAC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFBF99222975629500A7BAC3 /* GoogleService-Info.plist */; };
 		FFBF9926297562D800A7BAC3 /* ScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF9925297562D800A7BAC3 /* ScheduleListViewController.swift */; };
@@ -49,6 +50,7 @@
 		FFA0BAA929713E4B00CEC09D /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
 		FFACEFBC298B80FA0093F787 /* ScheduleFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFormViewController.swift; sourceTree = "<group>"; };
 		FFACEFBE298B81230093F787 /* ScheduleFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFormViewModel.swift; sourceTree = "<group>"; };
+		FFACEFC2298B94F60093F787 /* FirebaseCloudMessagingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCloudMessagingService.swift; sourceTree = "<group>"; };
 		FFBF99222975629500A7BAC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFBF9925297562D800A7BAC3 /* ScheduleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListViewController.swift; sourceTree = "<group>"; };
 		FFBF99272975633500A7BAC3 /* ScheduleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListViewModel.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			children = (
 				FFD58E6529702E51002D99B6 /* AppleAuthorityService.swift */,
 				FFBF992F2975646700A7BAC3 /* FirestoreService.swift */,
+				FFACEFC2298B94F60093F787 /* FirebaseCloudMessagingService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFD58E6429702E3F002D99B6 /* LoginViewModel.swift in Sources */,
+				FFACEFC3298B94F60093F787 /* FirebaseCloudMessagingService.swift in Sources */,
 				FFD58E6629702E51002D99B6 /* AppleAuthorityService.swift in Sources */,
 				63AAAB062967EA2600775EC3 /* LoginViewController.swift in Sources */,
 				FFACEFBF298B81230093F787 /* ScheduleFormViewModel.swift in Sources */,
