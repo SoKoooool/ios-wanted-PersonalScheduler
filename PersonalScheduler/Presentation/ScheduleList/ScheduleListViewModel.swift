@@ -22,14 +22,6 @@ final class ScheduleListViewModel {
         }
     }
     
-    func saveSchedule(item: ViewSchedule) {
-        useCase.executeCreateSchedule(item: item)
-    }
-    
-    func modifySchedule(item: ViewSchedule) {
-        useCase.executeUpdateSchedule(item: item)
-    }
-    
     func removeSchedule(item: ViewSchedule) {
         useCase.executeDeleteSchedule(item: item)
     }
