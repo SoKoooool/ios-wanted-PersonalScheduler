@@ -6,11 +6,11 @@
 //
 
 import Foundation
+import OAuth2
 
 final class FirebaseCloudMessagingService {
     
     private let fcmString = "https://fcm.googleapis.com/v1/projects/personalscheduler-2d82d/messages:send"
-    private let oauth2String = "https://www.googleapis.com/auth/firebase.messaging"
     
     func registerRemoteNotification(data: Data) {
         guard let request = makeRequest(with: data) else { return }
@@ -24,13 +24,22 @@ final class FirebaseCloudMessagingService {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("Authorization", forHTTPHeaderField: "Bearer" + getAccessToken())
+        
         request.httpBody = data
         return request
     }
     
-    private func getAccessToken() -> String {
-        let token = ""
-        return token
+    private func getAccessToken(completion: @escaping (String?) -> Void) {
+        guard let path = Bundle.main.path(forResource: "serviceAccountKey", ofType: "json") else { return }
+        let url = URL(fileURLWithPath: path)
+        let scopes = ["https://www.googleapis.com/auth/firebase.messaging"]
+        let provider = ServiceAccountTokenProvider(credentialsURL: url, scopes: scopes)
+        try? provider?.withToken({ token, error in
+            guard error == nil else {
+                print(error?.localizedDescription ?? #function)
+                return
+            }
+            completion(token?.AccessToken)
+        })
     }
 }

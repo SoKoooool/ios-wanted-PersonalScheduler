@@ -22,6 +22,8 @@
 		FFACEFBD298B80FA0093F787 /* ScheduleFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACEFBC298B80FA0093F787 /* ScheduleFormViewController.swift */; };
 		FFACEFBF298B81230093F787 /* ScheduleFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACEFBE298B81230093F787 /* ScheduleFormViewModel.swift */; };
 		FFACEFC3298B94F60093F787 /* FirebaseCloudMessagingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACEFC2298B94F60093F787 /* FirebaseCloudMessagingService.swift */; };
+		FFACEFC6298BA8570093F787 /* serviceAccountKey.json in Resources */ = {isa = PBXBuildFile; fileRef = FFACEFC5298BA8570093F787 /* serviceAccountKey.json */; };
+		FFACEFC9298BAB2D0093F787 /* OAuth2 in Frameworks */ = {isa = PBXBuildFile; productRef = FFACEFC8298BAB2D0093F787 /* OAuth2 */; };
 		FFBF37E02987654D008720DD /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = FFBF37DF2987654D008720DD /* FirebaseMessaging */; };
 		FFBF99232975629500A7BAC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFBF99222975629500A7BAC3 /* GoogleService-Info.plist */; };
 		FFBF9926297562D800A7BAC3 /* ScheduleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBF9925297562D800A7BAC3 /* ScheduleListViewController.swift */; };
@@ -51,6 +53,7 @@
 		FFACEFBC298B80FA0093F787 /* ScheduleFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFormViewController.swift; sourceTree = "<group>"; };
 		FFACEFBE298B81230093F787 /* ScheduleFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFormViewModel.swift; sourceTree = "<group>"; };
 		FFACEFC2298B94F60093F787 /* FirebaseCloudMessagingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCloudMessagingService.swift; sourceTree = "<group>"; };
+		FFACEFC5298BA8570093F787 /* serviceAccountKey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = serviceAccountKey.json; sourceTree = "<group>"; };
 		FFBF99222975629500A7BAC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FFBF9925297562D800A7BAC3 /* ScheduleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListViewController.swift; sourceTree = "<group>"; };
 		FFBF99272975633500A7BAC3 /* ScheduleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleListViewModel.swift; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFACEFC9298BAB2D0093F787 /* OAuth2 in Frameworks */,
 				FFBF37E02987654D008720DD /* FirebaseMessaging in Frameworks */,
 				FF4CDF86297135A500B48003 /* FirebaseAuth in Frameworks */,
 				FF4CDF88297135A500B48003 /* FirebaseFirestore in Frameworks */,
@@ -187,6 +191,7 @@
 				63AAAB0A2967EA2700775EC3 /* Assets.xcassets */,
 				63AAAB0C2967EA2700775EC3 /* LaunchScreen.storyboard */,
 				FFBF99222975629500A7BAC3 /* GoogleService-Info.plist */,
+				FFACEFC5298BA8570093F787 /* serviceAccountKey.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				FF4CDF87297135A500B48003 /* FirebaseFirestore */,
 				FF4CDF89297135A500B48003 /* FirebaseFirestoreSwift */,
 				FFBF37DF2987654D008720DD /* FirebaseMessaging */,
+				FFACEFC8298BAB2D0093F787 /* OAuth2 */,
 			);
 			productName = PersonalScheduler;
 			productReference = 63AAAAFE2967EA2600775EC3 /* PersonalScheduler.app */;
@@ -298,6 +304,7 @@
 			mainGroup = 63AAAAF52967EA2600775EC3;
 			packageReferences = (
 				FF4CDF84297135A500B48003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FFACEFC7298BAB2D0093F787 /* XCRemoteSwiftPackageReference "google-auth-library-swift" */,
 			);
 			productRefGroup = 63AAAAFF2967EA2600775EC3 /* Products */;
 			projectDirPath = "";
@@ -314,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63AAAB0E2967EA2700775EC3 /* LaunchScreen.storyboard in Resources */,
+				FFACEFC6298BA8570093F787 /* serviceAccountKey.json in Resources */,
 				FFBF99232975629500A7BAC3 /* GoogleService-Info.plist in Resources */,
 				63AAAB0B2967EA2700775EC3 /* Assets.xcassets in Resources */,
 			);
@@ -569,6 +577,14 @@
 				version = 9.6.0;
 			};
 		};
+		FFACEFC7298BAB2D0093F787 /* XCRemoteSwiftPackageReference "google-auth-library-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleapis/google-auth-library-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.5.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -586,6 +602,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FF4CDF84297135A500B48003 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		FFACEFC8298BAB2D0093F787 /* OAuth2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFACEFC7298BAB2D0093F787 /* XCRemoteSwiftPackageReference "google-auth-library-swift" */;
+			productName = OAuth2;
 		};
 		FFBF37DF2987654D008720DD /* FirebaseMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
