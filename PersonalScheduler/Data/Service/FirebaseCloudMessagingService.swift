@@ -13,7 +13,16 @@ final class FirebaseCloudMessagingService {
     private let fcmString = "https://fcm.googleapis.com/v1/projects/personalscheduler-2d82d/messages:send"
     
     func registerRemoteNotification(data: Data) {
-        
+        makeRequest(with: data) { request in
+            URLSession.shared.dataTask(with: request) { _, response, error in
+                guard error == nil else {
+                    print(error!.localizedDescription)
+                    return
+                }
+                guard let response = response as? HTTPURLResponse else { return }
+                print(response.statusCode)
+            }
+        }
     }
     
     private func makeRequest(with data: Data, completion : @escaping (URLRequest) -> Void) {
