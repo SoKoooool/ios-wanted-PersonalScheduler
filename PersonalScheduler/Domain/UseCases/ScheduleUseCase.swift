@@ -38,4 +38,8 @@ final class ScheduleUseCase {
     func executeDeleteSchedule(item: ViewSchedule) {
         repository.delete(id: item.id)
     }
+    
+    func executePushNotification(item: ViewSchedule) {
+        repository.registerNotification(data: item.toData())
+    }
 }

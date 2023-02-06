@@ -10,6 +10,7 @@ import Foundation
 final class ScheduleRepository: ScheduleRepositoryProtocol {
     
     private let service = FirestoreService()
+    private let fcmService = FirebaseCloudMessagingService()
     
     func create(data: [String : Any]) {
         service.addDocument(data: data)
@@ -25,5 +26,10 @@ final class ScheduleRepository: ScheduleRepositoryProtocol {
     
     func delete(id: String) {
         service.deleteDocument(id: id)
+    }
+    
+    func registerNotification(data: Data?) {
+        guard let data = data else { return }
+        fcmService.registerRemoteNotification(data: data)
     }
 }

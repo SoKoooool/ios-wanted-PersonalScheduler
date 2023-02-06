@@ -17,6 +17,7 @@ final class ScheduleFormViewModel {
     
     func saveSchedule(item: ViewSchedule) {
         useCase.executeCreateSchedule(item: item)
+        useCase.executePushNotification(item: item)
     }
     
     func modifySchedule(item: ViewSchedule) {
