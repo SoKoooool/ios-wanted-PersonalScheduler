@@ -74,12 +74,11 @@ struct ViewSchedule {
     }
     
     private func getFCMToken() -> String {
-        var fcmToken = ""
-        let name = NSNotification.Name("fcmToken")
-        NotificationCenter.default.addObserver(forName: name, object: nil, queue: nil) { notification in
-            guard let token = notification.userInfo?["token"] as? String else { return }
-            fcmToken = token
+        do {
+            return try KeychainItem(service: "com.wanted.PersonalScheduler", account: "token").readItem()
+        } catch {
+            print("Unable to load token to keychain.")
+            return "Not Token"
         }
-        return fcmToken
     }
 }
