@@ -50,20 +50,9 @@ struct ViewSchedule {
     }
     
     func toData() -> Data? {
-        struct Payload: Encodable {
-            let message: Message
-        }
-        struct Message: Encodable {
-            let token: String
-            let notification: Noti
-        }
-        struct Noti: Encodable {
-            let title: String
-            let body: String
-        }
         let token = getFCMToken()
-        let noti = Noti(title: self.title!, body: self.content!)
-        let message = Message(token: token, notification: noti)
+        let noti = Payload.Noti(title: self.title!, body: self.content!)
+        let message = Payload.Message(token: token, notification: noti)
         let payload = Payload(message: message)
         
         guard let jsonData = try? JSONEncoder().encode(payload),
