@@ -8,8 +8,6 @@
 import UIKit
 import AuthenticationServices
 import FacebookCore
-import FBSDKCoreKit
-import FBSDKCoreKit_Basics
 import FirebaseCore
 import FirebaseMessaging
 
@@ -21,14 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         
+        ApplicationDelegate.shared.application(application,
+                                               didFinishLaunchingWithOptions: launchOptions)
+        
         UNUserNotificationCenter.current().delegate = self
         Messaging.messaging().delegate = self
         self.registerForRemoteNotifications()
         
-        return true
-    }
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         return true
     }
 }

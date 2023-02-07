@@ -7,17 +7,28 @@
 
 import UIKit
 import AuthenticationServices
+import FacebookCore
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
-
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         confirmCredentialState()
         window?.makeKeyAndVisible()
+    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let context = URLContexts.first else {
+            fatalError("Open url called without a context. This should never happen.")
+        }
+
+        ApplicationDelegate.shared.application(UIApplication.shared,
+            open: context.url,
+            sourceApplication: nil,
+            annotation: nil)
     }
     
     private func confirmCredentialState() {
