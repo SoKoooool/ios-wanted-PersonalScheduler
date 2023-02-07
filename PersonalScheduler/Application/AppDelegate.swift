@@ -30,20 +30,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         appleIDProvider.getCredentialState(forUserID: KeychainItem.currentUserIdentifier) { state, error in
             DispatchQueue.main.async {
+                let viewController: UIViewController
                 switch state {
                 case .authorized:
-                    let viewController = ScheduleListViewController()
-                    self.window = UIWindow()
-                    self.window?.rootViewController = viewController
-                    self.window?.makeKeyAndVisible()
+                    viewController = ScheduleListViewController()
                 case .revoked, .notFound:
-                    let viewController = LoginViewController()
-                    self.window = UIWindow()
-                    self.window?.rootViewController = viewController
-                    self.window?.makeKeyAndVisible()
+                    viewController = LoginViewController()
                 default:
-                    break
+                    viewController = LoginViewController()
                 }
+                self.window?.rootViewController?
+                    .showEntry(viewController: viewController)
             }
         }
     }
