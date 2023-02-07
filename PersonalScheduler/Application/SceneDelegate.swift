@@ -33,8 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 default:
                     viewController = LoginViewController()
                 }
-                self.window?.rootViewController?
-                    .showEntry(viewController: viewController)
+                self.window?.rootViewController = viewController
             }
         }
     }
