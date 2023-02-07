@@ -7,6 +7,7 @@
 
 import UIKit
 import AuthenticationServices
+import FacebookCore
 import FirebaseCore
 import FirebaseMessaging
 
