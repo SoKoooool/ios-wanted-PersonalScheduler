@@ -10,7 +10,7 @@ import UIKit
 extension UIViewController {
     
     func showEntry(viewController: UIViewController) {
-        
+        present(viewController, animated: false)
     }
 }
 
