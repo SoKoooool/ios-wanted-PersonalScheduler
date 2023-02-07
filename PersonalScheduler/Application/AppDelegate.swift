@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
+        confirmCredentialState()
         
         UNUserNotificationCenter.current().delegate = self
         Messaging.messaging().delegate = self
@@ -28,19 +29,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func confirmCredentialState() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         appleIDProvider.getCredentialState(forUserID: KeychainItem.currentUserIdentifier) { state, error in
-            switch state {
-            case .authorized:
-                let viewController = ScheduleListViewController()
-                self.window = UIWindow()
-                self.window?.rootViewController = viewController
-                self.window?.makeKeyAndVisible()
-            case .revoked, .notFound:
-                let viewController = LoginViewController()
-                self.window = UIWindow()
-                self.window?.rootViewController = viewController
-                self.window?.makeKeyAndVisible()
-            default:
-                break
+            DispatchQueue.main.async {
+                switch state {
+                case .authorized:
+                    let viewController = ScheduleListViewController()
+                    self.window = UIWindow()
+                    self.window?.rootViewController = viewController
+                    self.window?.makeKeyAndVisible()
+                case .revoked, .notFound:
+                    let viewController = LoginViewController()
+                    self.window = UIWindow()
+                    self.window?.rootViewController = viewController
+                    self.window?.makeKeyAndVisible()
+                default:
+                    break
+                }
             }
         }
     }
