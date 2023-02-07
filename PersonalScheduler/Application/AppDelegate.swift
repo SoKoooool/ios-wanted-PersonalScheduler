@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AuthenticationServices
 import FirebaseCore
 import FirebaseMessaging
 
@@ -22,6 +23,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.registerForRemoteNotifications()
         
         return true
+    }
+    
+    private func confirmCredentialState() {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        appleIDProvider.getCredentialState(forUserID: KeychainItem.currentUserIdentifier) { state, error in
+            switch state {
+            case .authorized:
+                let viewController = ScheduleListViewController()
+                self.window = UIWindow()
+                self.window?.rootViewController = viewController
+                self.window?.makeKeyAndVisible()
+            case .revoked, .notFound:
+                let viewController = LoginViewController()
+                self.window = UIWindow()
+                self.window?.rootViewController = viewController
+                self.window?.makeKeyAndVisible()
+            default:
+                break
+            }
+        }
     }
 }
 
