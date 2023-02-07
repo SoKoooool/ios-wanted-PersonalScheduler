@@ -8,6 +8,8 @@
 import UIKit
 import AuthenticationServices
 import FacebookCore
+import FBSDKCoreKit
+import FBSDKCoreKit_Basics
 import FirebaseCore
 import FirebaseMessaging
 
@@ -18,7 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        confirmCredentialState()
         
         UNUserNotificationCenter.current().delegate = self
         Messaging.messaging().delegate = self
@@ -27,23 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    private func confirmCredentialState() {
-        let appleIDProvider = ASAuthorizationAppleIDProvider()
-        appleIDProvider.getCredentialState(forUserID: KeychainItem.currentUserIdentifier) { state, error in
-            DispatchQueue.main.async {
-                let viewController: UIViewController
-                switch state {
-                case .authorized:
-                    viewController = ScheduleListViewController()
-                case .revoked, .notFound:
-                    viewController = LoginViewController()
-                default:
-                    viewController = LoginViewController()
-                }
-                self.window?.rootViewController?
-                    .showEntry(viewController: viewController)
-            }
-        }
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return true
     }
 }
 

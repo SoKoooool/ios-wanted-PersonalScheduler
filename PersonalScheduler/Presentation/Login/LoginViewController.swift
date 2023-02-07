@@ -7,6 +7,8 @@
 
 import UIKit
 import AuthenticationServices
+import FacebookLogin
+import FBSDKLoginKit
 
 // MARK: - Life Cycle
 
@@ -22,6 +24,12 @@ final class LoginViewController: UIViewController {
     
     private let appleSignInButton: ASAuthorizationAppleIDButton = {
         let btn = ASAuthorizationAppleIDButton(type: .signIn, style: .black)
+        return btn
+    }()
+    
+    private let facebookSignInButton: FBLoginButton = {
+        let btn = FBLoginButton()
+        btn.permissions = ["public_profile", "email"]
         return btn
     }()
     
@@ -61,6 +69,7 @@ extension LoginViewController {
     private func setupViews() {
         setupSignInButtonStackView()
         setupAppleSignInButton()
+        setupFacebookSignInButton()
     }
     
     private func setupSignInButtonStackView() {
@@ -70,6 +79,10 @@ extension LoginViewController {
     private func setupAppleSignInButton() {
         signInButtonStackView.addArrangedSubview(appleSignInButton)
         appleSignInButton.addTarget(self, action: #selector(signInButtonTapped(_:)), for: .touchUpInside)
+    }
+    
+    private func setupFacebookSignInButton() {
+        view.addSubview(facebookSignInButton)
     }
 }
 
