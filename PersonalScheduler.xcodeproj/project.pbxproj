@@ -18,6 +18,7 @@
 		FF4CDF86297135A500B48003 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FF4CDF85297135A500B48003 /* FirebaseAuth */; };
 		FF4CDF88297135A500B48003 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FF4CDF87297135A500B48003 /* FirebaseFirestore */; };
 		FF4CDF8A297135A500B48003 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF4CDF89297135A500B48003 /* FirebaseFirestoreSwift */; };
+		FF9A3E382993BEEF0056B07C /* FacebookAuthorityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9A3E372993BEEF0056B07C /* FacebookAuthorityService.swift */; };
 		FFA0BAAA29713E4B00CEC09D /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA0BAA929713E4B00CEC09D /* KeychainItem.swift */; };
 		FFA8625D2991FDA9006A307E /* UIVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA8625C2991FDA9006A307E /* UIVIewController.swift */; };
 		FFACEFBD298B80FA0093F787 /* ScheduleFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFACEFBC298B80FA0093F787 /* ScheduleFormViewController.swift */; };
@@ -53,6 +54,7 @@
 		FF4CDF762970F7B600B48003 /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUseCase.swift; sourceTree = "<group>"; };
 		FF4CDF7B2970FB9000B48003 /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRepository.swift; sourceTree = "<group>"; };
 		FF4CDF7E2970FBB600B48003 /* SignInRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRepositoryProtocol.swift; sourceTree = "<group>"; };
+		FF9A3E372993BEEF0056B07C /* FacebookAuthorityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthorityService.swift; sourceTree = "<group>"; };
 		FFA0BAA929713E4B00CEC09D /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
 		FFA8625C2991FDA9006A307E /* UIVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewController.swift; sourceTree = "<group>"; };
 		FFACEFBC298B80FA0093F787 /* ScheduleFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFormViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				FFD58E6529702E51002D99B6 /* AppleAuthorityService.swift */,
+				FF9A3E372993BEEF0056B07C /* FacebookAuthorityService.swift */,
 				FFBF992F2975646700A7BAC3 /* FirestoreService.swift */,
 				FFACEFC2298B94F60093F787 /* FirebaseCloudMessagingService.swift */,
 			);
@@ -355,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF9A3E382993BEEF0056B07C /* FacebookAuthorityService.swift in Sources */,
 				FFD58E6429702E3F002D99B6 /* LoginViewModel.swift in Sources */,
 				FFACEFC3298B94F60093F787 /* FirebaseCloudMessagingService.swift in Sources */,
 				FFD58E6629702E51002D99B6 /* AppleAuthorityService.swift in Sources */,

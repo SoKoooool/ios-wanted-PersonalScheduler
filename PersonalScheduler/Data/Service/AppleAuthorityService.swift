@@ -93,14 +93,17 @@ extension AppleAuthorityService: ASAuthorizationControllerDelegate {
             return
         }
         
-        let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce)
+        let credential = OAuthProvider.credential(withProviderID: "apple.com",
+                                                  idToken: idTokenString,
+                                                  rawNonce: nonce)
         
-        Auth.auth().signIn(with: credential) { [weak self] result, error in
+        Auth.auth().signIn(with: credential) { [weak self] authResult, error in
             if error != nil {
                 guard let error = error else { return }
+                self?.didCompleteWithError?(error)
                 print(error.localizedDescription)
             }
-            self?.didCompleteWithAuthorization?(result)
+            self?.didCompleteWithAuthorization?(authResult)
         }
     }
     
