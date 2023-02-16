@@ -18,6 +18,8 @@ final class LoginViewController: UIViewController {
     
     private let signInButtonStackView: UIStackView = {
         let st = UIStackView()
+        st.axis = .vertical
+        st.spacing = 8
         st.translatesAutoresizingMaskIntoConstraints = false
         return st
     }()
@@ -82,7 +84,7 @@ extension LoginViewController {
     }
     
     private func setupFacebookSignInButton() {
-        view.addSubview(facebookSignInButton)
+        signInButtonStackView.addArrangedSubview(facebookSignInButton)
     }
 }
 
