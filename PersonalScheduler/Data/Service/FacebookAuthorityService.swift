@@ -8,7 +8,6 @@
 import Foundation
 import FacebookLogin
 import FirebaseAuth
-import CryptoKit
 
 final class FacebookAuthorityService: NSObject {
     
