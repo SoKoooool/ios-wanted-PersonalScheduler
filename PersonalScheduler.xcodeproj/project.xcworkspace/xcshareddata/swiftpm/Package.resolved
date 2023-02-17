@@ -41,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/facebook/facebook-ios-sdk",
       "state" : {
-        "revision" : "c3d367656ae8ced1149c2c6a5e6b5dd91ecad63c",
-        "version" : "9.3.0"
+        "revision" : "6832bbf8e7a0bffdf384d718e9126526840230c6",
+        "version" : "16.0.0"
       }
     },
     {
@@ -50,8 +50,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk",
       "state" : {
-        "revision" : "7e80c25b51c2ffa238879b07fbfc5baa54bb3050",
-        "version" : "9.6.0"
+        "revision" : "f567ed9a2b30e29159df258049a9c662c517688e",
+        "version" : "10.5.0"
       }
     },
     {
@@ -68,8 +68,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleAppMeasurement.git",
       "state" : {
-        "revision" : "c1cfde8067668027b23a42c29d11c246152fe046",
-        "version" : "9.6.0"
+        "revision" : "9a09ece724128e8d1e14c5133b87c0e236844ac0",
+        "version" : "10.4.0"
       }
     },
     {
